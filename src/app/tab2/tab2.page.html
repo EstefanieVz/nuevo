@@ -13,5 +13,17 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-button id="open-action-sheet">Activar</ion-button>
+
+  <ion-action-sheet trigger="open-action-sheet" header="Actions" [buttons]="Buttons"></ion-action-sheet>
+  <ion-button id="present-alert">Alerta</ion-button>
+  <ion-alert
+  trigger="present-alert"
+  header="Medicamentos"
+  subHeader="Paracetamol"
+  message="Tomar 1 cada 6 hrs"
+  [buttons]="Buttons">
+  </ion-alert>
+
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
