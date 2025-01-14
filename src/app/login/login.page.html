@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+   
+    <ion-item>
+      <ion-icon slot="start" name="mail" aria-hidden="true"></ion-icon>
+      <ion-input
+        label="Ingresa tu correo"
+        labelPlacement="stacked"
+        [clearInput]="true"
+        placeholder="Enter text to see clear button"
+        value="Estefanie@gmail.com"
+      >
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      <ion-input
+        label="Ingresa una contraseña"
+        labelPlacement="stacked"
+        [clearInput]="true"
+        placeholder="Enter text to see clear button"
+        value="Estefanie12345"
+      >
+      </ion-input>
+    </ion-item>
+    <br>
+<div style="display: flex; justify-content: center;">
+  <ion-button shape="round" href="../tab1/tab1.page.html">Registrar</ion-button>
+    <ion-button shape="round">Login</ion-button>
+  </div>
+  </div>
+</ion-content>
+
+
+

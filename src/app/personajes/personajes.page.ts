@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-personajes',
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonajesPage implements OnInit {
 
-  constructor() { }
+  characters=[{id:'',name:'',image:''}];
+  constructor(private http:HttpClient) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.http
+    .get<any>("htpps://rickandmortyapi.com/api/character")
+    .subscribe((res)=>{
+      console.log(res)
+      this.characters=res.results;
+    })
   }
 
 }

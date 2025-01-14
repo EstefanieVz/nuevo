@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Segmentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-segment color="tertiary" [(ngModel)]="selectedSegment">
+  <ion-segment-button value="all">
+    <ion-label>Todo</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="favorites">
+    <ion-label>Favorites</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<div *ngIf="selectedSegment==='all'">
+  <br>
+  <h2 style="text-align: center;">Todos los Pines</h2>
+  <div style="display: flex;justify-content: center;">
+  <ion-card style="text-align: center;">
+    <br>
+    <img alt="Silhouette of mountains" src="https://i.pinimg.com/736x/66/c5/07/66c50770270660638c82048638c67d5b.jpg" width="500" height="500" alt=""/>
+    <ion-card-header>
+      <ion-card-title>Angry</ion-card-title>
+      <ion-card-subtitle>Ternurin molesto</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Cada minuto que estas enojado renuncias a sesenta segundos de paz mental.
+    </ion-card-content>
+  </ion-card>
+</div>
+<br>
+<div style="display: flex;justify-content: center;">
+  <ion-card style="text-align: center;">
+    <br>
+    <img alt="Silhouette of mountains" src="https://i.pinimg.com/736x/d3/a2/51/d3a251fa9b7e89b17300d13cd728d847.jpg" width="500" height="500" alt=""/>
+    <ion-card-header>
+      <ion-card-title>Thinking</ion-card-title>
+      <ion-card-subtitle>Ternurin Pensando</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      ¿Por qué las ciruelas negras son rojas cuando están verdes?    </ion-card-content>
+  </ion-card>
+</div>
+<br>
+<div style="display: flex;justify-content: center;">
+  <ion-card style="text-align: center;">
+    <br>
+    <img alt="Silhouette of mountains" src="https://i.pinimg.com/736x/6e/c4/4a/6ec44aaa5b6d8a5e9646174e5d4e322c.jpg" width="500" height="500" alt=""/>
+    <ion-card-header>
+      <ion-card-title>Peace</ion-card-title>
+      <ion-card-subtitle>Ternurin tranquilo</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Prohibido prohibir
+    </ion-card-content>
+  </ion-card>
+</div>
+
+
+</div>
+
+<div *ngIf="selectedSegment==='favorites'">
+  <br>
+  <h2 style="text-align: center;">Mis favoritos</h2>
+  
+<div style="display: flex;justify-content: center;">
+  <ion-card style="text-align: center;">
+    <br>
+    <img alt="Silhouette of mountains" src="https://i.pinimg.com/736x/d3/a2/51/d3a251fa9b7e89b17300d13cd728d847.jpg" width="500" height="500" alt=""/>
+    <ion-card-header>
+      <ion-card-title>Thinking</ion-card-title>
+      <ion-card-subtitle>Ternurin Pensando</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      ¿Por qué las ciruelas negras son rojas cuando están verdes?    </ion-card-content>
+  </ion-card>
+</div>
+</div>
+</ion-content>

@@ -17,6 +17,26 @@ const routes: Routes = [
   {
     path: 'card',
     loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'ventana1',
+    loadChildren: () => import('./ventana1/ventana1.module').then( m => m.Ventana1PageModule)
+  },
+  {
+    path: 'ventana2',
+    loadChildren: () => import('./ventana2/ventana2.module').then( m => m.Ventana2PageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   }
 ];
 @NgModule({
