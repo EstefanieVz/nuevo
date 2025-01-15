@@ -9,12 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PersonajesPage implements OnInit {
 
-  characters=[{id:'',name:'',image:''}];
+  characters=[{id:'',name:'',image:'',character:'',status:'',location:'',origin:'',type:''}];
   constructor(private http:HttpClient) { }
 
   async ngOnInit() {
     this.http
-    .get<any>("htpps://rickandmortyapi.com/api/character")
+    .get<any>("https://rickandmortyapi.com/api/character")
     .subscribe((res)=>{
       console.log(res)
       this.characters=res.results;
